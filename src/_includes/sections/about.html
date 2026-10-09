@@ -1,0 +1,47 @@
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbsr-2535">
+    <div class="cs-container">
+        <div class="cs-picture-group">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1200 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1200 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1200 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1200 }) | jpeg %}" alt="Dark wooden mountain lodge on a hillside above a stone path, with snowy peaks behind" width="580" height="870" loading="lazy" decoding="async">
+            </picture>
+            <span class="cs-play" aria-hidden="true">
+                <img class="cs-icon" src="/assets/svgs/icon-play-button.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+            </span>
+        </div>
+        <div class="cs-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">Who I Am</span>
+                <h2 class="cs-title">A Decade Building High Country Homes, Now Working Only for You</h2>
+            </div>
+            <div class="cs-wrapper2">
+                <div class="cs-stat-group">
+                    <div class="cs-stat">
+                        <span class="cs-number">10+</span>
+                        Years of Building Locally
+                    </div>
+                    <div class="cs-stat">
+                        <span class="cs-number">100%</span>
+                        Owner-Aligned Fees
+                    </div>
+                </div>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        I'm Justin Davis. After ten years managing custom home builds for other companies, I started Jack Stud to give owners what I couldn't otherwise send my own family to: someone who holds a real standard, works only for them, and never profits from a bigger price tag.
+                    </p>
+                    <a href="/about/" class="cs-button-solid">Learn About My Approach</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
+</section>

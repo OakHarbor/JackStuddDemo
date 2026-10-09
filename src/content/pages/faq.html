@@ -1,0 +1,26 @@
+---
+title: "FAQ | Owner-Builder Consulting | Jack Stud"
+description: "Answers to common questions about owner-builder consulting, owner's representation, cost estimates, fees, and the areas Jack Stud serves."
+permalink: "/faq/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/pages.css">
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Frequently Asked Questions" %}
+    {% set bannerCrumb = "FAQ" %}
+    {% set bannerImage = "/assets/images/process-banner.jpg" %}
+    {% set bannerAlt = "Rooftops of a hillside town of brick houses among autumn trees" %}
+    {% include "sections/banner.html" %}
+
+    {% include "sections/faq.html" %}
+    {% include "sections/cta.html" %}
+{% endblock %}

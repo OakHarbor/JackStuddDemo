@@ -1,0 +1,25 @@
+---
+title: "Client Reviews | Jack Stud Construction Consulting"
+description: "Read what High Country homeowners say about working with Justin Davis on owner-builder consulting, cost estimates, and owner's representation."
+permalink: "/reviews/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/pages.css">
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Reviews" %}
+    {% set bannerImage = "/assets/images/faq-side.jpg" %}
+    {% set bannerAlt = "Stone and timber manor with dormer windows above a grassy slope and a stone retaining wall" %}
+    {% include "sections/banner.html" %}
+
+    {% include "sections/reviews.html" %}
+    {% include "sections/cta.html" %}
+{% endblock %}

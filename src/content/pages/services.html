@@ -1,0 +1,25 @@
+---
+title: "Construction Consulting Services in Boone, NC | Jack Stud"
+description: "Owner-builder consulting, full takeoff and cost estimates, owner's representation, bid-ready packages, lot reviews, and bid comparison in the High Country."
+permalink: "/services/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Services" %}
+    {% set bannerImage = "/assets/images/process-banner.jpg" %}
+    {% set bannerAlt = "Rooftops of a hillside town of brick houses among autumn trees" %}
+    {% include "sections/banner.html" %}
+    {% include "sections/services.html" %}
+    {% include "sections/more-services.html" %}
+    {% include "sections/cta.html" %}
+{% endblock %}

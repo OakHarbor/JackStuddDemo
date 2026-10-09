@@ -1,0 +1,84 @@
+---
+title: "Full Takeoff & Cost Estimate in Boone, NC | Jack Stud"
+description: "Own your land and have plans? Get a full takeoff and cost estimate with real sub bids before you talk to builders. Includes up to three builder bids compared."
+permalink: "/full-takeoff-cost-estimate/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Full Takeoff & Cost Estimate" %}
+    {% set bannerParentTitle = "Services" %}
+    {% set bannerParentUrl = "/services/" %}
+    {% set bannerImage = "/assets/images/service-takeoff-estimate.jpg" %}
+    {% set bannerAlt = "Two men at a wooden desk reviewing papers beside a calculator and a small house model" %}
+    {% include "sections/banner.html" %}
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="service-sbs">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Two men at a wooden desk reviewing papers beside a calculator and a small house model" width="580" height="580" loading="lazy" decoding="async" style="object-position: 40% 50%">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Main Service</span>
+                <h2 class="cs-title">Get Your Own Numbers Before You Talk to Builders</h2>
+                <p class="cs-text">
+                    You own the land and you have plans. Before you talk to builders, you get your own numbers. I count everything that goes into your house, down to how many 2x6s are in it, solicit real bids from subs across every trade, price the materials, and set your allowances.
+                </p>
+                <p class="cs-text">
+                    That's a full takeoff and cost estimate, built the same way a builder builds one, and you own all of it. Instead of walking into those meetings on defense, you walk in on offense, with a subject matter expert on your side who knows what the builder knows.
+                </p>
+                <p class="cs-text">
+                    Includes analyzing and comparing up to three builder bids.
+                </p>
+                <h3 class="cs-h3">Who It's For</h3>
+                <p class="cs-text">
+                    Someone with land and plans is a takeoff and estimate. Your plans can come from an architect or a stock set.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Book a Takeoff &amp; Estimate</a>
+            </div>
+            <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+    </section>
+
+    {% include "sections/process.html" %}
+
+    <!-- ============================================ -->
+    <!--               Owner-Builder                  -->
+    <!-- ============================================ -->
+
+    <section id="service-flagship">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Owner-Builder Consulting</span>
+                <h2 class="cs-title">Want to Run Your Build Without a General Contractor?</h2>
+                <p class="cs-text">
+                    Your takeoff and estimate is often where Owner-Builder Consulting starts. You hold the contracts and fund the work, and I handle the schedule, the subs, the sequencing, and the site, start to finish, for a flat monthly fee.
+                </p>
+            </div>
+            <a href="/owner-builder-consulting/" class="cs-button-solid">See How It Works</a>
+            <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+    </section>
+
+    {% include "sections/cta.html" %}
+
+{% endblock %}

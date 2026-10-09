@@ -1,0 +1,120 @@
+---
+title: "Contact Jack Stud | Construction Consulting in Boone, NC"
+description: "Contact Justin Davis at Jack Stud LLC about owner-builder consulting, cost estimates, or owner's representation in Boone, Banner Elk, and Blowing Rock."
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="stylesheet" href="/assets/css/pages.css">
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Contact" %}
+    {% set bannerImage = "/assets/images/cta-bg.jpg" %}
+    {% set bannerAlt = "Aerial view of wooden chalets and a ski lift in an evergreen forest" %}
+    {% include "sections/banner.html" %}
+
+    <!-- ============================================ -->
+    <!--                Contact Form                  -->
+    <!-- ============================================ -->
+
+    <section id="contact-265">
+        <div class="cs-container">
+            <div class="cs-left-section">
+                <div class="cs-content">
+                    <span class="cs-topper">Contact</span>
+                    <h2 class="cs-title">Start With a Conversation</h2>
+                    <p class="cs-text">
+                        Still shopping for land, holding plans, or already sitting down with builders? Every stage has a way in. Tell me where your project stands and what you're after, and we'll figure out which path fits.
+                    </p>
+                </div>
+                <form id="cs-form-265" name="contact" method="post" action="/contact/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="cs-hidden">
+                        <label>
+                            Leave this field empty
+                            <input name="bot-field" tabindex="-1" autocomplete="off">
+                        </label>
+                    </p>
+                    <label class="cs-label">
+                        Name
+                        <input required type="text" id="name-265" name="name" autocomplete="name" placeholder="Your name">
+                    </label>
+                    <label class="cs-label">
+                        Email
+                        <input required type="email" id="email-265" name="email" autocomplete="email" placeholder="you@example.com">
+                    </label>
+                    <label class="cs-label">
+                        Phone
+                        <input type="tel" id="phone-265" name="phone" autocomplete="tel" placeholder="Your phone number">
+                    </label>
+                    <label class="cs-label">
+                        Where are you in your project?
+                        <select required id="stage-265" name="project-stage">
+                            <option value="" disabled selected>Select one</option>
+                            <option value="Still shopping for land">Still shopping for land</option>
+                            <option value="I own land and have plans">I own land and have plans</option>
+                            <option value="I'm talking to builders">I'm talking to builders</option>
+                            <option value="I've already hired a builder">I've already hired a builder</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                    <label class="cs-label cs-span-12">
+                        Which service are you interested in?
+                        <select required id="service-265" name="service">
+                            <option value="" disabled selected>Select one</option>
+                            <option value="Owner-Builder Consulting">Owner-Builder Consulting</option>
+                            <option value="Owner's Representation">Owner's Representation</option>
+                            <option value="Full Takeoff &amp; Cost Estimate">Full Takeoff &amp; Cost Estimate</option>
+                            <option value="Bid-Ready Package">Bid-Ready Package</option>
+                            <option value="Lot Review">Lot Review</option>
+                            <option value="Bid Comparison">Bid Comparison</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </label>
+                    <label class="cs-label cs-span-12">
+                        Message
+                        <textarea required id="message-265" name="message" placeholder="Tell me about your land, your plans, and your timeline"></textarea>
+                    </label>
+                    <div class="cs-span-12" data-netlify-recaptcha="true"></div>
+                    <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="cs-right-section">
+                <div class="cs-info">
+                    <span class="cs-header">Phone</span>
+                    <a class="cs-info-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
+                    <span class="cs-header">Email</span>
+                    <a class="cs-info-link" href="mailto:{{ client.email }}">Click To Email</a>
+                    <span class="cs-header">Address</span>
+                    <a class="cs-info-link" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
+                        {{ client.address.lineOne }}<br>
+                        {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}
+                    </a>
+                    <span class="cs-header">Service Area</span>
+                    <ul class="cs-area-list">
+                        {%- for area in client.serviceArea %}
+                        <li class="cs-area">{{ area }}</li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+                <picture class="cs-bg-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 720 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 720 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 720 }) | jpeg %}" type="image/jpeg">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1200 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1200 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1200 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1200 }) | jpeg %}" alt="Smiling woman in a light blue blazer and a man holding rolled plans, seated together on a sofa" width="560" height="760" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+        <div class="cs-map">
+            <iframe src="https://www.google.com/maps?q=444+Old+Reece+Rd,+Banner+Elk,+NC+28604&amp;output=embed" title="Map of {{ client.name }} at {{ client.address.lineOne }}, {{ client.address.city }}, {{ client.address.state }}" width="1920" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+    </section>
+{% endblock %}

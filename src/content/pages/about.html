@@ -1,0 +1,131 @@
+---
+title: "About Justin Davis | Jack Stud Construction Consulting"
+description: "Meet Justin Davis of Jack Stud LLC: veteran owned, NC licensed, and a decade building custom homes in Boone, Banner Elk, and Blowing Rock."
+permalink: "/about/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/pages.css">
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "About" %}
+    {% set bannerImage = "/assets/images/hero-bg.jpg" %}
+    {% set bannerAlt = "White chalet with a timber balcony among tall spruces below rocky, forested mountains" %}
+    {% include "sections/banner.html" %}
+
+    {% include "sections/about.html" %}
+
+    <!-- ============================================ -->
+    <!--                    Story                     -->
+    <!-- ============================================ -->
+
+    <section id="story-2600">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">My Story</span>
+                <h2 class="cs-title">The Piece That Carries the Load</h2>
+            </div>
+            <div class="cs-row">
+                <h3 class="cs-h3">About Me</h3>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        I'm Justin Davis. I live in Boone and I've spent the last decade building custom homes in the High Country for other people's companies. Project manager, superintendent, on site.
+                    </p>
+                    <p class="cs-text">
+                        I got into this because of a question I couldn't get past: if someone I love were building a house up here, who would I send them to? I know this market and I know the people in it, and I couldn't come up with an answer I was comfortable with. Not because there aren't good builders. Because the thing I'd want for my own family, someone who holds a real standard and stays on it every day, isn't something you can just go buy. So I built it.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-row">
+                <h3 class="cs-h3">My Company</h3>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        Jack Stud LLC. A jack stud is the piece that carries the header over an opening. It takes the load so the opening can be there at all. Every wide window and every wall of glass looking out at these mountains has one working next to it, buried in the wall, doing the structural work nobody sees. That's the job. You get the house. I carry the load that makes it possible.
+                    </p>
+                    <p class="cs-text">
+                        I work for owners, not builders. Depending on what you need, that means running your entire project while you hold the permit, representing you against a builder you've already hired, or getting your project defined and priced before anyone bids it. I don't take a cut of the build, and I don't make more money when your house costs more. You work with me, not with a company that hands you off.
+                    </p>
+                    <a href="/owner-builder-consulting/" class="cs-link">Explore Owner-Builder Consulting</a>
+                </div>
+            </div>
+            <div class="cs-row">
+                <h3 class="cs-h3">Philosophy</h3>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        I work for the owner and nobody else. My fee doesn't move with what the house costs, so I have nothing to gain from any decision except the right one. And because I'm working for you, you're in the decisions with me. You'll understand your own project well enough to know what you're looking at.
+                    </p>
+                    <p class="cs-text">
+                        The rest is standards. A house is only as good as the standard the person running it is willing to hold. I set expectations clearly before anyone starts and I hold everyone on the job to them, every day, on every trade.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-row">
+                <h3 class="cs-h3">Experience</h3>
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        Over ten years building custom homes in the High Country. Four companies, ranging from the largest and most established builder in the area to small shops. High-end new construction start to finish, from pre-construction through closeout.
+                    </p>
+                    <p class="cs-text">
+                        That's project management and superintendent work in this market specifically: Boone, Banner Elk, Blowing Rock. I hold a North Carolina general contractor's license. I know what things cost here, which subs do good work, what the terrain does to a budget, and where projects go sideways.
+                    </p>
+                </div>
+            </div>
+            <figure class="cs-mission">
+                <span class="cs-topper">Mission</span>
+                <blockquote class="cs-quote">
+                    Give people building in the High Country a subject matter expert who works only for them, and a standard of work that isn't otherwise for sale here.
+                </blockquote>
+                <img class="cs-mission-mark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
+            </figure>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Why Work With Me             -->
+    <!-- ============================================ -->
+
+    <section id="why-2601">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Why Work With Me</span>
+                <h2 class="cs-title">What You Get Working With Me</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <h3 class="cs-h3">Veteran Owned</h3>
+                    <p class="cs-item-text">Jack Stud LLC is a veteran-owned business, run by the same person you'll work with on your project.</p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">Licensed GC in North Carolina</h3>
+                    <p class="cs-item-text">I hold the license and I've used it. This business is consulting and project management, not general contracting, but I know the work from the inside because I've done it.</p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">Insured</h3>
+                    <p class="cs-item-text">Jack Stud LLC is an insured business.</p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">I'm Here</h3>
+                    <p class="cs-item-text">I live in Boone. I'm on the sites. In a market where most owners are somewhere else while their house goes up, that's most of the value.</p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">I've Built These Houses</h3>
+                    <p class="cs-item-text">Not just advised on them. I've run high-end custom homes as project manager and superintendent for other builders for a decade plus, start to finish.</p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">You're Working With Me</h3>
+                    <p class="cs-item-text">Small by design. There's no junior your project gets handed to.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    {% include "sections/why-choose.html" %}
+    {% include "sections/cta.html" %}
+{% endblock %}

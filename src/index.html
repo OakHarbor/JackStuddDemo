@@ -1,0 +1,128 @@
+---
+title: "Jack Stud | Construction Consulting in Boone, NC"
+description: "Construction consulting for custom homes in the High Country. Owner-builder consulting, cost estimates, and owner's representation from Justin Davis."
+permalink: "/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 900, height: 1400 }) | avif %}" media="(max-width: 600px)">
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+    {% set preloadImg = "/assets/images/hero-bg.jpg" %}
+    {% include "components/home-schema.html" %}
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-1427">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Your Advocate, Always</span>
+                <h1 class="cs-title">Real Expertise, On Your Side of the Table</h1>
+                <p class="cs-text">
+                    Jack Stud LLC gives High Country homeowners a licensed expert who works only for them, from land to closeout, for a flat fee.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Book a Free Consultation</a>
+            </div>
+        </div>
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 900, height: 1400 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 900, height: 1400 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 900, height: 1400 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1600 }) | jpeg %}" type="image/jpeg">
+            <source media="(min-width: 1025px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2400 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1025px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2400 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1025px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2400 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2400 }) | jpeg %}" alt="White chalet with a timber balcony among tall spruces below rocky, forested mountains" width="1920" height="1280" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+    </section>
+    {% include "sections/services.html" %}
+    {% include "sections/about.html" %}
+    {% include "sections/why-choose.html" %}
+    {% include "sections/more-services.html" %}
+    {% include "sections/cta.html" %}
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="RPsbs-2278">
+        <div class="cs-header">
+            <span class="cs-topper">Featured Services</span>
+            <h2 class="cs-title">The Two Most Common Ways I Help</h2>
+        </div>
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Three people on a sofa reviewing color plans spread across a coffee table" width="580" height="442" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <h3 class="cs-h3">Owner-Builder Consulting</h3>
+                <p class="cs-text">
+                    Run your build without a general contractor. You hold every contract and make every call, while I manage the schedule, subcontractors, and site from start to finish.
+                </p>
+                <span class="cs-heading">Service Included:</span>
+                <ul class="cs-ul">
+                    <li class="cs-li"><span><strong>You Hold Control:</strong> Every contract and decision stays entirely in your name</span></li>
+                    <li class="cs-li"><span><strong>Flat Monthly Fee:</strong> One fixed rate, never tied to your build cost</span></li>
+                    <li class="cs-li"><span><strong>Full Site Oversight:</strong> I manage schedule, subs, and sequencing from start to finish</span></li>
+                </ul>
+                <a href="/owner-builder-consulting/" class="cs-button-solid">Book Owner-Builder Consulting</a>
+            </div>
+            <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="RPsbsr-2278">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/featured-owners-rep.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Smiling woman in a light blue blazer and a man holding rolled plans, seated together on a sofa" width="580" height="442" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <h3 class="cs-h3">Owner's Representation</h3>
+                <p class="cs-text">
+                    Already hired a builder? I sit on your side of the table, watching the schedule, draws, and change orders so nothing slips past you unnoticed.
+                </p>
+                <span class="cs-heading">Service Included:</span>
+                <ul class="cs-ul">
+                    <li class="cs-li"><span><strong>Contract Negotiation:</strong> Expert support before you sign any builder agreement</span></li>
+                    <li class="cs-li"><span><strong>Ongoing Oversight:</strong> Schedule, draws, and change orders tracked closely throughout</span></li>
+                    <li class="cs-li"><span><strong>Your Advocate:</strong> Same builder-level expertise, working entirely for your side</span></li>
+                </ul>
+                <a href="/owners-representation/" class="cs-button-solid">Book Owner's Representation</a>
+            </div>
+        </div>
+    </section>
+    {% include "sections/process.html" %}
+    {% include "sections/reviews.html" %}
+    {% include "sections/faq.html" %}
+{% endblock %}

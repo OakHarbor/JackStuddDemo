@@ -1,0 +1,79 @@
+---
+title: "Mountain Lot Review in Boone, NC | Jack Stud"
+description: "Shopping for a mountain lot? I walk the lots, check slope, access, septic, water, and utilities, and give you a short written report on each one."
+permalink: "/lot-review/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Lot Review" %}
+    {% set bannerParentTitle = "Services" %}
+    {% set bannerParentUrl = "/services/" %}
+    {% set bannerImage = "/assets/images/service-lot-review.jpg" %}
+    {% set bannerAlt = "Man in a hard hat holding a clipboard and giving a thumbs up toward a new house across a dirt lot" %}
+    {% include "sections/banner.html" %}
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="service-sbs">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Man in a hard hat holding a clipboard and giving a thumbs up toward a new house across a dirt lot" width="580" height="580" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Additional Service</span>
+                <h2 class="cs-title">Can This Lot Give You What You Want?</h2>
+                <p class="cs-text">
+                    You know what you want out of a property. Whether a given mountain lot can give you that, and what it takes to build there, is a different question. Slope, access, driveway, septic, water, utilities.
+                </p>
+                <p class="cs-text">
+                    I walk the lots, work the maps and GIS, and give you a short written report on each one and how it lines up with what you're after. Up to three lots, more available.
+                </p>
+                <h3 class="cs-h3">Who It's For</h3>
+                <p class="cs-text">
+                    Someone still shopping for land is a lot review.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Book a Lot Review</a>
+            </div>
+            <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--               Owner-Builder                  -->
+    <!-- ============================================ -->
+
+    <section id="service-flagship">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Owner-Builder Consulting</span>
+                <h2 class="cs-title">Want to Run Your Build Without a General Contractor?</h2>
+                <p class="cs-text">
+                    A different way to build. You hold the contracts and fund the work, and I handle the schedule, the subs, the sequencing, and the site, start to finish, for a flat monthly fee instead of a percentage of what your house costs.
+                </p>
+            </div>
+            <a href="/owner-builder-consulting/" class="cs-button-solid">See How It Works</a>
+            <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+    </section>
+
+    {% include "sections/cta.html" %}
+
+{% endblock %}

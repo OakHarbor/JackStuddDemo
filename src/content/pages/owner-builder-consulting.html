@@ -1,0 +1,101 @@
+---
+title: "Owner-Builder Consulting in Boone, NC | Jack Stud"
+description: "Build your High Country home without a general contractor. You hold the contracts; I run the schedule, subs, and site for a flat monthly fee."
+permalink: "/owner-builder-consulting/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Owner-Builder Consulting" %}
+    {% set bannerParentTitle = "Services" %}
+    {% set bannerParentUrl = "/services/" %}
+    {% set bannerImage = "/assets/images/service-owner-builder.jpg" %}
+    {% set bannerAlt = "Older man in a pink shirt holding a white architectural house model beside a red barn" %}
+    {% include "sections/banner.html" %}
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="service-sbs">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Older man in a pink shirt holding a white architectural house model beside a red barn" width="580" height="580" loading="lazy" decoding="async" style="object-position: 75% 60%">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Main Service</span>
+                <h2 class="cs-title">A Different Way to Build</h2>
+                <p class="cs-text">
+                    You hold the contracts and fund the work. You have final say on all decisions. I handle the schedule, the subs, the sequencing, and the site, start to finish, for a flat monthly fee instead of a percentage of what your house costs.
+                </p>
+                <p class="cs-text">
+                    It isn't right for everyone, but for the right client it means real control, real transparency, and significant savings over the traditional route.
+                </p>
+                <h3 class="cs-h3">Who It's For</h3>
+                <p class="cs-text">
+                    People who want to understand their own project instead of handing it off. You want to be in the decisions, you want to know what things actually cost and why, and you see the value in having a subject matter expert on your side.
+                </p>
+                <p class="cs-text">
+                    It isn't for anyone whose priority is building as cheaply as possible. What I do is get a high-quality home built at better than GC pricing.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Book Owner-Builder Consulting</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="service-sbsr">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Three people on a sofa reviewing color plans spread across a coffee table" width="580" height="580" loading="lazy" decoding="async" style="object-position: 25% 50%">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Why Build This Way</span>
+                <h2 class="cs-title">Hiring a GC Isn't the Only Option</h2>
+                <p class="cs-text">
+                    Almost everyone up here builds the same way: hire a GC, sign a contract, hope it goes well. That works for some people. It isn't the only option, and it isn't always the best one.
+                </p>
+                <p class="cs-text">
+                    I offer real alternatives, up to and including building without a GC at all, and I help you figure out which path actually fits you.
+                </p>
+                <h3 class="cs-h3">Service Included</h3>
+                <ul class="cs-ul">
+                    <li class="cs-li"><span><strong>You Hold Control:</strong> Every contract and decision stays entirely in your name</span></li>
+                    <li class="cs-li"><span><strong>Flat Monthly Fee:</strong> One fixed rate for the length of the build, never tied to your build cost</span></li>
+                    <li class="cs-li"><span><strong>Full Site Oversight:</strong> I manage schedule, subs, and sequencing from start to finish</span></li>
+                    <li class="cs-li"><span><strong>You're Working With Me:</strong> Small by design. There's no junior your project gets handed to</span></li>
+                </ul>
+                <a href="/contact/" class="cs-button-solid">Schedule Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    {% include "sections/process.html" %}
+
+    {% include "sections/cta.html" %}
+
+{% endblock %}

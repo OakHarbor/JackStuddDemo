@@ -1,0 +1,38 @@
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-1458">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 720, height: 600 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 720, height: 600 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 720, height: 600 }) | jpeg %}" type="image/jpeg">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080 }) | avif %}" type="image/avif">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080 }) | webp %}" type="image/webp">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080 }) | jpeg %}" alt="Stone and timber manor with dormer windows above a grassy slope and a stone retaining wall" width="580" height="720" loading="lazy" decoding="async">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Asked questions</span>
+            <h2 class="cs-title">Frequently <br class="cs-break">Asked Questions</h2>
+            <ul class="cs-faq-group">
+                {%- for item in faq %}
+                <li class="cs-faq-item{% if loop.first %} active{% endif %}">
+                    <button class="cs-button" type="button" aria-expanded="{{ 'true' if loop.first else 'false' }}" aria-controls="faq-1458-answer-{{ loop.index }}">
+                        <span class="cs-button-text">{{ item.question }}</span>
+                        <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                    </button>
+                    <p class="cs-item-p" id="faq-1458-answer-{{ loop.index }}">{{ item.answer }}</p>
+                </li>
+                {%- endfor %}
+            </ul>
+        </div>
+    </div>
+    <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
+    <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" aria-hidden="true" loading="lazy" decoding="async">
+    <script defer src="/assets/js/faq.js"></script>
+</section>

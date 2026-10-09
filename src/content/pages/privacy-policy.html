@@ -1,0 +1,75 @@
+---
+title: "Privacy Policy | Jack Stud LLC"
+description: "How Jack Stud LLC collects, uses, and protects the information you share through our contact and newsletter forms, and the choices you have."
+permalink: "/privacy-policy/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/footer-logo-bg.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+    <link rel="stylesheet" href="/assets/css/pages.css">
+{% endblock %}
+
+{% block body %}
+    {% set bannerTitle = "Privacy Policy" %}
+    {% set bannerImage = "/assets/images/footer-logo-bg.jpg" %}
+    {% set bannerAlt = "Neighborhood of brick houses in a mountain valley at sunset" %}
+    {% include "sections/banner.html" %}
+
+    <!-- ============================================ -->
+    <!--                  Legal Text                  -->
+    <!-- ============================================ -->
+
+    <section id="legal-2602">
+        <div class="cs-container">
+            <p>This privacy policy explains how {{ client.name }} ("Jack Stud," "we," "us," or "our"), a North Carolina limited liability company, collects, uses, and protects information when you visit this website or contact us through it.</p>
+
+            <h2>Information We Collect</h2>
+            <p>We only collect the information you choose to give us:</p>
+            <ul>
+                <li><strong>Contact form.</strong> Your name, email address, phone number, where you are in your project, the service you're interested in, and your message.</li>
+                <li><strong>Newsletter form.</strong> Your email address.</li>
+            </ul>
+            <p>Like most websites, our hosting provider may also automatically record basic technical information when you visit, such as your browser type, device, and the pages you view.</p>
+
+            <h2>How We Use Your Information</h2>
+            <ul>
+                <li>To respond to your inquiry and talk with you about your project.</li>
+                <li>To send you our newsletter, if you signed up for it. You can unsubscribe at any time.</li>
+                <li>To keep the website secure and working properly.</li>
+            </ul>
+
+            <h2>We Do Not Sell Your Information</h2>
+            <p>We do not sell, rent, or trade your personal information. We only share it with the service providers that help us run this website, as described below, or when required by law.</p>
+
+            <h2>Service Providers</h2>
+            <p>This website is hosted by Netlify, which also processes the forms you submit on it. Information you send through our forms is stored and delivered to us through Netlify's systems. You can read Netlify's privacy policy on their website.</p>
+            <p>Our contact form uses Google reCAPTCHA to protect against spam. reCAPTCHA collects hardware and software information, such as device and application data, and sends it to Google. Your use of reCAPTCHA is subject to Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a>.</p>
+
+            <h2>Cookies and Analytics</h2>
+            <p>This website may use cookies and similar technologies to remember your preferences, such as light or dark mode, and to understand in general terms how visitors use the site. You can set your browser to refuse cookies, though some features may not work as intended.</p>
+
+            <h2>How Long We Keep Information</h2>
+            <p>We keep the information you send us for as long as we need it to respond to you and work with you, or as long as the law requires.</p>
+
+            <h2>Your Choices</h2>
+            <p>You can ask us to see, correct, or delete the personal information you have sent us by contacting us using the details below.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>This website is not intended for children under 13, and we do not knowingly collect personal information from them.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. Changes take effect when they are posted on this page.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have questions about this privacy policy or your information, contact us:</p>
+            <ul class="cs-contact-list">
+                <li><strong>{{ client.name }}</strong></li>
+                <li>{{ client.address.lineOne }}, {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}</li>
+                <li>Email: <a href="mailto:{{ client.email }}">Click To Email</a></li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
