@@ -7,19 +7,124 @@ permalink: "/reviews/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
-    <link rel="stylesheet" href="/assets/css/pages.css">
+    <link rel="stylesheet" href="/assets/css/reviews.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "Reviews" %}
-    {% set bannerImage = "/assets/images/faq-side.jpg" %}
-    {% set bannerAlt = "Stone and timber manor with dormer windows above a grassy slope and a stone retaining wall" %}
-    {% include "sections/banner.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
 
-    {% include "sections/reviews.html" %}
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Reviews</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/reviews/" class="cs-link cs-active" aria-current="page">Reviews</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Stone and timber manor with dormer windows above a grassy slope and a stone retaining wall" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
+
+    <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="reviews-2539">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Client Voices</span>
+                <h2 class="cs-title">What Owners Say&nbsp;<br class="cs-break">About Working With Me</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-review-group">
+                        <img class="cs-quote" src="/assets/svgs/icon-quote.svg" alt="" width="32" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Finally, Clarity</h3>
+                            <p class="cs-review">Before Jack Stud, I had no idea what I was actually paying for. Justin walked me through every decision, and I ended up with a better house at a price I understood the whole way through.</p>
+                        </div>
+                    </div>
+                    <div class="cs-flex-group">
+                        <span class="cs-initial" aria-hidden="true">S</span>
+                        <span class="cs-name">
+                            Sarah M.
+                            <span class="cs-job">Homeowner, Banner Elk NC</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-review-group">
+                        <img class="cs-quote" src="/assets/svgs/icon-quote.svg" alt="" width="32" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">On My Side</h3>
+                            <p class="cs-review">I already had a builder, but I had no way to know if the numbers made sense. Having Justin review every change order and draw request gave me real peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="cs-flex-group">
+                        <span class="cs-initial" aria-hidden="true">D</span>
+                        <span class="cs-name">
+                            David C.
+                            <span class="cs-job">Homeowner, Blowing Rock</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-review-group">
+                        <img class="cs-quote" src="/assets/svgs/icon-quote.svg" alt="" width="32" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Worth Every Penny</h3>
+                            <p class="cs-review">I was skeptical about paying a flat fee instead of a percentage, but it meant Justin had zero incentive to let costs creep. That alone paid for itself.</p>
+                        </div>
+                    </div>
+                    <div class="cs-flex-group">
+                        <span class="cs-initial" aria-hidden="true">R</span>
+                        <span class="cs-name">
+                            Rebecca T.
+                            <span class="cs-job">Homeowner, Boone NC</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-review-group">
+                        <img class="cs-quote" src="/assets/svgs/icon-quote.svg" alt="" width="32" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">Knew the Market Cold</h3>
+                            <p class="cs-review">Justin caught things in our bids that three different builders had priced completely differently. Without him, we never would have known what we were actually comparing.</p>
+                        </div>
+                    </div>
+                    <div class="cs-flex-group">
+                        <span class="cs-initial" aria-hidden="true">M</span>
+                        <span class="cs-name">
+                            Michael A.
+                            <span class="cs-job">Homeowner, Banner Elk NC</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <picture class="cs-background" aria-hidden="true">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/testimonials-bg.jpg" | resize({ width: 608, height: 1216, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/testimonials-bg.jpg" | resize({ width: 1980, height: 1086, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/testimonials-bg.jpg" | resize({ width: 2500, height: 1371, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/testimonials-bg.jpg" | resize({ width: 2500, height: 1371, position: "attention" }) | jpeg %}" alt="" width="1920" height="1053" loading="lazy" decoding="async">
+        </picture>
+    </section>
     {% include "sections/cta.html" %}
 {% endblock %}

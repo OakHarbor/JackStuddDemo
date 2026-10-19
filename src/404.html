@@ -1,0 +1,59 @@
+---
+title: "Page Not Found | Jack Stud"
+description: "The page you're looking for isn't here. Head back to the Jack Stud homepage, browse construction consulting services, or get in touch with Justin Davis."
+permalink: "/404.html"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <meta name="robots" content="noindex, follow">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
+    <link rel="stylesheet" href="/assets/css/interior.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Page Not Found</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/404.html" class="cs-link cs-active" aria-current="page">Page Not Found</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Stone and timber mountain home with an infinity pool at sunset" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Page Content                 -->
+    <!-- ============================================ -->
+
+    <section id="legal-2602">
+        <div class="cs-container">
+            <h2>That Page Isn't Here</h2>
+            <p>The link may be old, or the address may have a typo. Try one of these instead:</p>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/faq/">Frequently Asked Questions</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

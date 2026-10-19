@@ -7,20 +7,105 @@ permalink: "/faq/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
-    <link rel="stylesheet" href="/assets/css/pages.css">
+    <link rel="stylesheet" href="/assets/css/faq.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "Frequently Asked Questions" %}
-    {% set bannerCrumb = "FAQ" %}
-    {% set bannerImage = "/assets/images/process-banner.jpg" %}
-    {% set bannerAlt = "Vaulted great room with exposed timber beams and a stone fireplace" %}
-    {% include "sections/banner.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
 
-    {% include "sections/faq.html" %}
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Frequently Asked Questions</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/faq/" class="cs-link cs-active" aria-current="page">FAQ</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Vaulted great room with exposed timber beams and a stone fireplace" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
+
+    <!-- ============================================ -->
+    <!--                     FAQ                      -->
+    <!-- ============================================ -->
+
+    <section id="faq-1458">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 608, height: 507, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 1100, height: 810, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080, position: "attention" }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/faq-side.jpg" | resize({ width: 870, height: 1080, position: "attention" }) | jpeg %}" alt="Stone and timber manor with dormer windows above a grassy slope and a stone retaining wall" width="580" height="720" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <div class="cs-content">
+                <span class="cs-topper">Asked questions</span>
+                <h2 class="cs-title">Frequently <br class="cs-break">Asked Questions</h2>
+                <ul class="cs-faq-group">
+                    <li class="cs-faq-item active">
+                        <button class="cs-button" type="button" aria-expanded="true" aria-controls="faq-1458-answer-1">
+                            <span class="cs-button-text">What's the difference between Owner-Builder Consulting and Owner's Representation?</span>
+                            <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                            <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        </button>
+                        <p class="cs-item-p" id="faq-1458-answer-1">With Owner-Builder Consulting, you hold the contracts and fund the work, and I handle the schedule, the subs, the sequencing, and the site for a flat monthly fee. With Owner's Representation, you hire a builder and I work for you and only you, from builder selection and contract negotiation through the end of the job.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button" type="button" aria-expanded="false" aria-controls="faq-1458-answer-2">
+                            <span class="cs-button-text">Do you take a percentage of my build cost?</span>
+                            <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                            <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        </button>
+                        <p class="cs-item-p" id="faq-1458-answer-2">No. I charge a flat monthly fee that never changes based on what your house costs, so I have no financial incentive tied to your budget.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button" type="button" aria-expanded="false" aria-controls="faq-1458-answer-3">
+                            <span class="cs-button-text">I haven't bought land yet. Can you still help?</span>
+                            <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                            <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        </button>
+                        <p class="cs-item-p" id="faq-1458-answer-3">Yes. Someone still shopping for land is a lot review. I walk the lots, work the maps and GIS, and give you a short written report on each one and how it lines up with what you're after.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button" type="button" aria-expanded="false" aria-controls="faq-1458-answer-4">
+                            <span class="cs-button-text">Are you a general contractor?</span>
+                            <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                            <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        </button>
+                        <p class="cs-item-p" id="faq-1458-answer-4">I hold a North Carolina general contractor's license and I've used it. This business is consulting and project management, not general contracting, but I know the work from the inside because I've done it.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button" type="button" aria-expanded="false" aria-controls="faq-1458-answer-5">
+                            <span class="cs-button-text">What areas do you serve?</span>
+                            <img class="cs-chevron cs-chevron-closed" src="/assets/svgs/icon-right-arrow-dark.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                            <img class="cs-chevron cs-chevron-open" src="/assets/svgs/icon-right-arrow-primary.svg" alt="" width="24" height="24" aria-hidden="true" loading="lazy" decoding="async">
+                        </button>
+                        <p class="cs-item-p" id="faq-1458-answer-5">The High Country: Boone, Banner Elk, Blowing Rock, and the surrounding area. I don't go as far south as Asheville.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" aria-hidden="true" loading="lazy" decoding="async">
+        <script defer src="/assets/js/faq.js"></script>
+    </section>
     {% include "sections/cta.html" %}
 {% endblock %}

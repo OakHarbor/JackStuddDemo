@@ -2,25 +2,43 @@
 title: "Owner-Builder Consulting in Boone, NC | Jack Stud"
 description: "Build your High Country home without a general contractor. You hold the contracts; I run the schedule, subs, and site for a flat monthly fee."
 permalink: "/owner-builder-consulting/"
-tags: "sitemap"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/services.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "Owner-Builder Consulting" %}
-    {% set bannerParentTitle = "Services" %}
-    {% set bannerParentUrl = "/services/" %}
-    {% set bannerImage = "/assets/images/service-owner-builder.jpg" %}
-    {% set bannerAlt = "Older man in a pink shirt holding a white architectural house model beside a red barn" %}
-    {% include "sections/banner.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Owner-Builder Consulting</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/services/" class="cs-link">Services</a>
+                <a href="/owner-builder-consulting/" class="cs-link cs-active" aria-current="page">Owner-Builder Consulting</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Older man in a pink shirt holding a white architectural house model beside a red barn" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
@@ -29,13 +47,13 @@ tags: "sitemap"
     <section id="service-sbs">
         <div class="cs-container">
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Older man in a pink shirt holding a white architectural house model beside a red barn" width="580" height="580" loading="lazy" decoding="async" style="object-position: 75% 60%">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 608, height: 608, position: "attention" }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | jpeg %}" alt="Older man in a pink shirt holding a white architectural house model beside a red barn" width="580" height="580" loading="lazy" decoding="async">
             </picture>
             <div class="cs-content">
                 <span class="cs-topper">Main Service</span>
@@ -65,13 +83,13 @@ tags: "sitemap"
     <section id="service-sbsr">
         <div class="cs-container">
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Three people on a sofa reviewing color plans spread across a coffee table" width="580" height="580" loading="lazy" decoding="async" style="object-position: 25% 50%">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 608, height: 608, position: "attention" }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/featured-owner-builder.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | jpeg %}" alt="Three people on a sofa reviewing color plans spread across a coffee table" width="580" height="580" loading="lazy" decoding="async">
             </picture>
             <div class="cs-content">
                 <span class="cs-topper">Why Build This Way</span>
@@ -94,8 +112,77 @@ tags: "sitemap"
         </div>
     </section>
 
-    {% include "sections/process.html" %}
+    <!-- ============================================ -->
+    <!--                   Steps                      -->
+    <!-- ============================================ -->
+
+    <section id="steps-2549">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">How It Works</span>
+                <h2 class="cs-title">Every Stage Has a Starting Point</h2>
+                <p class="cs-text">
+                    Whether you're just beginning your search or already deep into builder conversations,&nbsp;<br class="cs-break">there's a clear next step for where you are.
+                </p>
+            </div>
+            <div class="cs-wrapper">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 608, height: 405, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1400, height: 467, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1840, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1840, height: 480, position: "attention" }) | jpeg %}" alt="Vaulted great room with exposed timber beams and a stone fireplace" width="1840" height="480" loading="lazy" decoding="async">
+                </picture>
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <div class="cs-header">
+                            <span class="cs-icon-wrapper">
+                                <img class="cs-icon" src="/assets/svgs/icon-step-reviewing-land.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                            <span class="cs-number">01</span>
+                        </div>
+                        <div class="cs-info">
+                            <h3 class="cs-h3">Reviewing Land</h3>
+                            <p class="cs-item-text">
+                                If you're still shopping for land, I walk the property and give you a report on slope, access, utilities, and buildability before you commit.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-item">
+                        <div class="cs-header">
+                            <span class="cs-icon-wrapper">
+                                <img class="cs-icon" src="/assets/svgs/icon-step-pricing.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                            <span class="cs-number">02</span>
+                        </div>
+                        <div class="cs-info">
+                            <h3 class="cs-h3">Pricing the Project</h3>
+                            <p class="cs-item-text">
+                                Once you own land and have plans, I put together a full takeoff and cost estimate so you know real numbers before builders get involved.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-item">
+                        <div class="cs-header">
+                            <span class="cs-icon-wrapper">
+                                <img class="cs-icon" src="/assets/svgs/icon-step-managing-build.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+                            </span>
+                            <span class="cs-number">03</span>
+                        </div>
+                        <div class="cs-info">
+                            <h3 class="cs-h3">Managing the Build</h3>
+                            <p class="cs-item-text">
+                                Whether you run the project yourself or hire a builder, I stay on site and on your side through every decision until closeout.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="/contact/" class="cs-button-solid">Schedule Appointment</a>
+        </div>
+    </section>
 
     {% include "sections/cta.html" %}
-
 {% endblock %}

@@ -3,7 +3,7 @@
         "@context": "http://schema.org",
         "@type": "ProfessionalService",
         "name": "{{ client.name }}",
-        {% if preloadImg %}"image": "{{ client.domain }}{{ preloadImg }}",{% endif %}
+        "image": "{{ client.domain }}/assets/images/hero-bg.jpg",
         {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
         {% if client.email %}"email": "{{ client.email }}",{% endif %}
         {% if client.address %}

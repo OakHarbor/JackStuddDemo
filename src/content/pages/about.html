@@ -7,20 +7,84 @@ permalink: "/about/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
-    <link rel="stylesheet" href="/assets/css/pages.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "About" %}
-    {% set bannerImage = "/assets/images/hero-bg.jpg" %}
-    {% set bannerAlt = "Stone and timber mountain home with an infinity pool at sunset" %}
-    {% include "sections/banner.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
 
-    {% include "sections/about.html" %}
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">About</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/about/" class="cs-link cs-active" aria-current="page">About</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Stone and timber mountain home with an infinity pool at sunset" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-2535">
+        <div class="cs-container">
+            <div class="cs-picture-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 608, height: 560, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1400, height: 886, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1160, height: 1338, position: "attention" }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/about-video-poster.jpg" | resize({ width: 1160, height: 1338, position: "attention" }) | jpeg %}" alt="Mountain home among autumn trees with a valley view" width="580" height="669" loading="lazy" decoding="async">
+                </picture>
+                <span class="cs-play" aria-hidden="true">
+                    <img class="cs-icon" src="/assets/svgs/icon-play-button.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                </span>
+            </div>
+            <div class="cs-wrapper">
+                <div class="cs-content">
+                    <span class="cs-topper">Who I Am</span>
+                    <h2 class="cs-title">A Decade Building High Country Homes, Now Working Only for You</h2>
+                </div>
+                <div class="cs-wrapper2">
+                    <div class="cs-stat-group">
+                        <div class="cs-stat">
+                            <span class="cs-number">10+</span>
+                            Years of Building Locally
+                        </div>
+                        <div class="cs-stat">
+                            <span class="cs-number">100%</span>
+                            Owner-Aligned Fees
+                        </div>
+                    </div>
+                    <div class="cs-flex">
+                        <p class="cs-text">
+                            I'm Justin Davis. After ten years managing custom home builds for other companies, I started Jack Stud to give owners what I couldn't otherwise send my own family to: someone who holds a real standard, works only for them, and never profits from a bigger price tag.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
+    </section>
 
     <!-- ============================================ -->
     <!--                    Story                     -->
@@ -126,6 +190,63 @@ permalink: "/about/"
         </div>
     </section>
 
-    {% include "sections/why-choose.html" %}
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-2050">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Why It Works</span>
+                <h2 class="cs-title">An Expert Who Only Works for You</h2>
+                <ul class="cs-ul-icons">
+                    <li class="cs-li-icons">
+                        <img class="cs-icon" src="/assets/svgs/icon-aligned-incentives.svg" alt="" width="39" height="40" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Aligned Incentives</h3>
+                            <p class="cs-li-text">My fee remains unchanged regardless of your home's price, ensuring my only motivation is to help you make the best decision possible.</p>
+                        </div>
+                    </li>
+                    <li class="cs-li-icons">
+                        <img class="cs-icon" src="/assets/svgs/icon-real-building-experience.svg" alt="" width="35" height="40" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Real Building Experience</h3>
+                            <p class="cs-li-text">With ten years of experience managing high-end custom homes, I’m deeply involved in every project, not just offering advice from a distance.</p>
+                        </div>
+                    </li>
+                    <li class="cs-li-icons">
+                        <img class="cs-icon" src="/assets/svgs/icon-educated-not-sidelined.svg" alt="" width="40" height="40" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">You're Educated, Not Sidelined</h3>
+                            <p class="cs-li-text">You’ll be involved in every decision, allowing you to fully understand your project and assess it independently by the end.</p>
+                        </div>
+                    </li>
+                    <li class="cs-li-icons">
+                        <img class="cs-icon" src="/assets/svgs/icon-boots-on-the-ground.svg" alt="" width="40" height="40" aria-hidden="true" loading="lazy" decoding="async">
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Boots on the Ground</h3>
+                            <p class="cs-li-text">Residing in Boone, I’m present at your site, unlike many owners and representatives who are often elsewhere.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cs-picture-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-it-works-feature.jpg" | resize({ width: 608, height: 800, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-it-works-feature.jpg" | resize({ width: 1200, height: 1260, position: "attention" }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-it-works-feature.jpg" | resize({ width: 1160, height: 1528, position: "attention" }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/why-it-works-feature.jpg" | resize({ width: 1160, height: 1528, position: "attention" }) | jpeg %}" alt="Stone fire pit with lounge chairs outside a mountain home at dusk" width="580" height="764" loading="lazy" decoding="async">
+                </picture>
+                <div class="cs-box">
+                    <img class="cs-box-icon" src="/assets/svgs/icon-standard-banner.svg" alt="" width="60" height="60" aria-hidden="true" loading="lazy" decoding="async">
+                    <h3 class="cs-box-title">A Standard You Set Once</h3>
+                    <p class="cs-box-desc">I set clear expectations before work starts and hold every trade to them, every day, on every job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     {% include "sections/cta.html" %}
 {% endblock %}

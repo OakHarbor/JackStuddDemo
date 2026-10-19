@@ -2,23 +2,176 @@
 title: "Construction Consulting Services in Boone, NC | Jack Stud"
 description: "Owner-builder consulting, full takeoff and cost estimates, owner's representation, bid-ready packages, lot reviews, and bid comparison in the High Country."
 permalink: "/services/"
-tags: "sitemap"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/services-page.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "Services" %}
-    {% set bannerImage = "/assets/images/process-banner.jpg" %}
-    {% set bannerAlt = "Vaulted great room with exposed timber beams and a stone fireplace" %}
-    {% include "sections/banner.html" %}
-    {% include "sections/services.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Services</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/services/" class="cs-link cs-active" aria-current="page">Services</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/process-banner.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Vaulted great room with exposed timber beams and a stone fireplace" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
+    <!-- ============================================ -->
+    <!--                  Services                    -->
+    <!-- ============================================ -->
+
+    <section id="services-448">
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" aria-hidden="true" decoding="async">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">What I Offer</span>
+                <h2 class="cs-title">Ways I Can Help</h2>
+                <p class="cs-text">
+                    Whether you're managing your own build, hiring a builder, or pricing a project before it starts, there's a service built around where you are right now.
+                </p>
+            </div>
+            <div class="cs-group cs-group-ongoing">
+                <h3 class="cs-group-title">Ongoing Support</h3>
+                <ul class="cs-card-group">
+                <li class="cs-item cs-item-owner-builder">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Owner-Builder Consulting</h4>
+                        <p class="cs-item-text">
+                            You hold the contracts and make every decision. I run the schedule, subs, and site for one flat monthly fee.
+                        </p>
+                        <a href="/owner-builder-consulting/" class="cs-link" aria-label="Read more about Owner-Builder Consulting">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1420, height: 880, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-owner-builder.jpg" | resize({ width: 1420, height: 880, position: "attention" }) | jpeg %}" alt="Older man in a pink shirt holding a white architectural house model beside a red barn" width="710" height="440" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                <li class="cs-item cs-item-owners-rep">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Owner's Representation</h4>
+                        <p class="cs-item-text">
+                            Already hired a builder? I represent you through contracts, draws, change orders, and the work itself, start to finish.
+                        </p>
+                        <a href="/owners-representation/" class="cs-link" aria-label="Read more about Owner's Representation">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-owners-rep.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-owners-rep.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-owners-rep.jpg" | resize({ width: 1420, height: 880, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-owners-rep.jpg" | resize({ width: 1420, height: 880, position: "attention" }) | jpeg %}" alt="Two men shaking hands in front of a building under construction" width="710" height="440" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                </ul>
+            </div>
+            <div class="cs-group cs-group-one-time">
+                <h3 class="cs-group-title">One-Time Services</h3>
+                <ul class="cs-card-group">
+                <li class="cs-item cs-item-takeoff">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Full Takeoff &amp; Cost Estimate</h4>
+                        <p class="cs-item-text">
+                            Get a builder-grade cost breakdown before you bid. Compare up to three builder bids with real numbers on your side.
+                        </p>
+                        <a href="/full-takeoff-cost-estimate/" class="cs-link" aria-label="Read more about Full Takeoff &amp; Cost Estimate">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 934, height: 720, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-takeoff-estimate.jpg" | resize({ width: 934, height: 720, position: "attention" }) | jpeg %}" alt="Rolled blueprints, a calculator and a wooden scale model on a work table" width="467" height="360" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                <li class="cs-item cs-item-bid-ready">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Bid-Ready Package</h4>
+                        <p class="cs-item-text">
+                            I coordinate surveys, engineering, and documentation so every builder bids the same house, making comparisons actually mean something.
+                        </p>
+                        <a href="/bid-ready-package/" class="cs-link" aria-label="Read more about Bid-Ready Package">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 934, height: 720, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 934, height: 720, position: "attention" }) | jpeg %}" alt="Construction plans, a laptop and a hard hat laid out on a timber beam" width="467" height="360" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                <li class="cs-item cs-item-bid-comparison">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Bid Comparison</h4>
+                        <p class="cs-item-text">
+                            I thoroughly break down your builder bids line by line so you know exactly what's different, and what important questions to ask before signing the contract.
+                        </p>
+                        <a href="/bid-comparison/" class="cs-link" aria-label="Read more about Bid Comparison">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-comparison.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-comparison.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-comparison.jpg" | resize({ width: 934, height: 720, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-bid-comparison.jpg" | resize({ width: 934, height: 720, position: "attention" }) | jpeg %}" alt="Two model houses side by side on architectural blueprints" width="467" height="360" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                <li class="cs-item cs-item-lot-review">
+                    <div class="cs-flex">
+                        <h4 class="cs-h3">Lot Review</h4>
+                        <p class="cs-item-text">
+                            Before you buy, I meticulously walk the property and review slope, access, utilities, and septic to confirm it fits your specific plans perfectly.
+                        </p>
+                        <a href="/lot-review/" class="cs-link" aria-label="Read more about Lot Review">Read More</a>
+                    </div>
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 720, height: 554, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 1000, height: 770, position: "attention" }) | avif %}" type="image/avif">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 934, height: 720, position: "attention" }) | avif %}" type="image/avif">
+                        <img src="{% getUrl "/assets/images/service-lot-review.jpg" | resize({ width: 934, height: 720, position: "attention" }) | jpeg %}" alt="Man in a hard hat holding a clipboard and giving a thumbs up toward a new house across a dirt lot" width="467" height="360" loading="lazy" decoding="async">
+                    </picture>
+                </li>
+                </ul>
+            </div>
+            <a href="/contact/" class="cs-button-solid">Book a Free Consultation</a>
+        </div>
+    </section>
     {% include "sections/cta.html" %}
 {% endblock %}

@@ -16,10 +16,13 @@
         </div>
         <div class="cs-card">
             <picture class="cs-picture">
-                <source srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 700 }) | avif %}" type="image/avif">
-                <source srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 700 }) | webp %}" type="image/webp">
-                <source srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 700 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 700 }) | jpeg %}" alt="Smiling man in a coral polo standing in front of a grey house with a white picket fence" width="308" height="240" loading="lazy" decoding="async">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | jpeg %}" alt="Smiling man in a coral polo standing in front of a grey house with a white picket fence" width="308" height="240" loading="lazy" decoding="async">
             </picture>
             <div class="cs-flex">
                 <span class="cs-label">Prefer to Talk First?</span>
@@ -29,13 +32,13 @@
     </div>
 
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 900 }) | avif %}" type="image/avif">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 900 }) | webp %}" type="image/webp">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 900 }) | jpeg %}" type="image/jpeg">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1920 }) | avif %}" type="image/avif">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1920 }) | webp %}" type="image/webp">
-        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1920 }) | jpeg %}" type="image/jpeg">
-        <img src="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1920 }) | jpeg %}" alt="Aerial view of wooden chalets and a ski lift in an evergreen forest" width="1920" height="629" loading="lazy" decoding="async">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 608, height: 1000, position: "attention" }) | avif %}" type="image/avif">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1980, height: 1100, position: "attention" }) | avif %}" type="image/avif">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 2500, height: 819, position: "attention" }) | avif %}" type="image/avif">
+        <img src="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 2500, height: 819, position: "attention" }) | jpeg %}" alt="Aerial view of wooden chalets and a ski lift in an evergreen forest" width="1920" height="629" loading="lazy" decoding="async">
     </picture>
     <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" loading="lazy" decoding="async" aria-hidden="true">
 </section>

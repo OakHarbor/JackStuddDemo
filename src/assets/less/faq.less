@@ -1,0 +1,257 @@
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #faq-1458 {
+        padding: clamp(3.75rem, 7.82vw, 8.75rem) 1rem;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            max-width: (740/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* 40px - 80px */
+            gap: clamp(2.5rem, 5vw, 5rem);
+        }
+
+        .cs-content {
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            margin: 0 0 clamp(1.5rem, 3vw, 2rem) 0;
+        }
+
+        .cs-faq-group {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-faq-item {
+            list-style: none;
+            width: 100%;
+            padding: (24/16rem) 0;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--secondaryLight);
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            &.active {
+                .cs-button {
+                    color: var(--primary);
+                }
+
+                .cs-chevron-closed {
+                    display: none;
+                }
+
+                .cs-chevron-open {
+                    display: block;
+                }
+
+                .cs-item-p {
+                    height: auto;
+                    padding-top: (12/16rem);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .cs-button {
+            font-family: var(--bodyFont);
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.6vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: left;
+            font-weight: 600;
+            width: 100%;
+            padding: 0;
+            border: none;
+            background: transparent;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: clamp(1rem, 2.5vw, 2rem);
+            transition: color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                color: var(--primary);
+            }
+        }
+
+        .cs-button-text {
+            flex: 1;
+        }
+
+        .cs-chevron {
+            width: (24/16rem);
+            height: (24/16rem);
+            flex: none;
+            display: block;
+        }
+
+        .cs-chevron-closed {
+            transform: rotate(90deg);
+        }
+
+        .cs-chevron-open {
+            display: none;
+            transform: rotate(-90deg);
+        }
+
+        .cs-item-p {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            width: 90%;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            color: var(--bodyTextColor);
+            overflow: hidden;
+            transition: opacity 0.3s;
+        }
+
+        .cs-image-group {
+            width: 100%;
+            height: clamp(18.75rem, 70vw, 37.5rem);
+            display: block;
+            position: relative;
+            flex: none;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: 47% center;
+            }
+        }
+
+        .cs-watermark {
+            width: clamp(9rem, 15.2vw, 18.25rem);
+            height: auto;
+            pointer-events: none;
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: clamp(0.9rem, 1.62vw, 1.9375rem);
+            z-index: -1;
+        }
+
+        .cs-separator {
+            width: 100%;
+            height: auto;
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #faq-1458 {
+        .cs-container {
+            max-width: ~"min(90rem, 100% - 2 * clamp(0rem, 5vw - 1.5rem, 4rem))";
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            width: 40.28%;
+            height: auto;
+            aspect-ratio: 580 / 720;
+        }
+
+        .cs-content {
+            flex: 1;
+            padding-left: clamp(0rem, 2.08vw, 2.5rem);
+        }
+
+        .cs-watermark {
+            display: block;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #faq-1458 {
+            background-color: var(--dark);
+
+            .cs-topper {
+                color: var(--primary);
+            }
+
+            .cs-title,
+            .cs-button {
+                color: #fff;
+            }
+
+            .cs-faq-item.active .cs-button,
+            .cs-button:hover {
+                color: var(--primary);
+            }
+
+            .cs-item-p {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.8;
+            }
+
+            .cs-faq-item {
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .cs-chevron-closed {
+                filter: brightness(0) invert(1);
+            }
+
+            .cs-watermark {
+                opacity: 0.12;
+            }
+        }
+    }
+}

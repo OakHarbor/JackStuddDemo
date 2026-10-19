@@ -2,25 +2,43 @@
 title: "Bid-Ready Package in Boone, NC | Jack Stud"
 description: "Close the open questions before builders bid. Coordinated surveys, engineering, and construction documents so every builder bids the same house."
 permalink: "/bid-ready-package/"
-tags: "sitemap"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 800 }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
-    <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    <link rel="stylesheet" href="/assets/css/services.css">
 {% endblock %}
 
 {% block body %}
-    {% set bannerTitle = "Bid-Ready Package" %}
-    {% set bannerParentTitle = "Services" %}
-    {% set bannerParentUrl = "/services/" %}
-    {% set bannerImage = "/assets/images/service-bid-ready-package.jpg" %}
-    {% set bannerAlt = "Construction plans, a laptop and a hard hat laid out on a timber beam" %}
-    {% include "sections/banner.html" %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <h1 class="cs-int-title">Bid-Ready Package</h1>
+            <nav class="cs-breadcrumbs" aria-label="Breadcrumb">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/services/" class="cs-link">Services</a>
+                <a href="/bid-ready-package/" class="cs-link cs-active" aria-current="page">Bid-Ready Package</a>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}" type="image/avif">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}" type="image/avif">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}" type="image/avif">
+            <img src="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | jpeg %}" alt="Construction plans, a laptop and a hard hat laid out on a timber beam" width="1800" height="465" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
+    </div>
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
@@ -29,13 +47,13 @@ tags: "sitemap"
     <section id="service-sbs">
         <div class="cs-container">
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 800 }) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 800 }) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 800 }) | jpeg %}" type="image/jpeg">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160 }) | avif %}" type="image/avif">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160 }) | webp %}" type="image/webp">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160 }) | jpeg %}" alt="Construction plans, a laptop and a hard hat laid out on a timber beam" width="580" height="580" loading="lazy" decoding="async">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 608, height: 608, position: "attention" }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/service-bid-ready-package.jpg" | resize({ width: 1160, height: 1160, position: "attention" }) | jpeg %}" alt="Construction plans, a laptop and a hard hat laid out on a timber beam" width="580" height="580" loading="lazy" decoding="async">
             </picture>
             <div class="cs-content">
                 <span class="cs-topper">Additional Service</span>
@@ -75,5 +93,4 @@ tags: "sitemap"
     </section>
 
     {% include "sections/cta.html" %}
-
 {% endblock %}
