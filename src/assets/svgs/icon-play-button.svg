@@ -1,6 +1,1 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Play button">
-<rect width="80" height="80" rx="40" fill="#F6F7F7"/>
-<path id="Polygon 1" d="M51 38.2679C52.3333 39.0377 52.3333 40.9623 51 41.7321L36 50.3923C34.6667 51.1621 33 50.1999 33 48.6603L33 31.3397C33 29.8001 34.6667 28.8379 36 29.6077L51 38.2679Z" fill="#B36210"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" overflow="visible" preserveAspectRatio="none" style="display:block" viewBox="0 0 80 80"><rect width="80" height="80" fill="#f6f7f7" rx="40"/><path fill="#b36210" d="M51 38.268c1.333.77 1.333 2.694 0 3.464l-15 8.66c-1.333.77-3-.192-3-1.732V31.34c0-1.54 1.667-2.502 3-1.732z"/></svg>
