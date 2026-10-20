@@ -3,8 +3,8 @@ module.exports = {
     shortName: "Jack Stud",
     owner: "Justin Davis",
     email: "justin@jackstudbuilding.com",
-    phoneForTel: "828-555-0192",
-    phoneFormatted: "(828) 555-0192",
+    phoneForTel: "828-278-4000",
+    phoneFormatted: "(828) 278-4000",
     address: {
         lineOne: "444 Old Reece Rd",
         city: "Banner Elk",
