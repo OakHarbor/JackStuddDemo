@@ -9,8 +9,6 @@ tags: "sitemap"
 
 {% block head %}
     <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 946, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 1408, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 1074, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
     {% if client.isProduction %}
@@ -295,6 +293,7 @@ tags: "sitemap"
     </section>
 
     {% include "sections/cta.html" %}
+
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
@@ -589,6 +588,8 @@ tags: "sitemap"
         </div>
         <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
         <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" aria-hidden="true" loading="lazy" decoding="async">
-        <script defer src="/assets/js/faq.js"></script>
     </section>
+
+    <script defer src="/assets/js/faq.js"></script>
+
 {% endblock %}

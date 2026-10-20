@@ -8,13 +8,12 @@ permalink: "/contact/"
 
 {% block head %}
     <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
     <link rel="stylesheet" href="/assets/css/contact.css">
 {% endblock %}
 
 {% block body %}
+    <!-- Banner 310 -->
     <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
@@ -39,6 +38,7 @@ permalink: "/contact/"
         <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
     </div>
 
+    <!-- Contact Form 265 -->
     <!-- ============================================ -->
     <!--                Contact Form                  -->
     <!-- ============================================ -->
@@ -53,7 +53,7 @@ permalink: "/contact/"
                         Still shopping for land, holding plans, or already sitting down with builders? Every stage has a way in. Tell me where your project stands and what you're after, and we'll figure out which path fits.
                     </p>
                 </div>
-                <form id="cs-form-265" name="contact" method="post" action="/contact/" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+                <form id="cs-form-265" name="contact" method="post" action="/contact/" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact">
                     <p class="cs-hidden">
                         <label>
@@ -101,7 +101,6 @@ permalink: "/contact/"
                         Message
                         <textarea required id="message-265" name="message" placeholder="Tell me about your land, your plans, and your timeline"></textarea>
                     </label>
-                    <div class="cs-span-12" data-netlify-recaptcha="true"></div>
                     <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
                 </form>
             </div>

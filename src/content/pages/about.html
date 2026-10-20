@@ -8,13 +8,12 @@ permalink: "/about/"
 
 {% block head %}
     <link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 608, height: 400, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 601px) and (max-width: 1024px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1980, height: 820, position: "attention" }) | avif %}">
-    <link rel="preload" as="image" type="image/avif" media="(min-width: 1025px)" href="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 2500, height: 647, position: "attention" }) | avif %}">
     <link rel="stylesheet" href="/assets/css/interior.css">
     <link rel="stylesheet" href="/assets/css/about.css">
 {% endblock %}
 
 {% block body %}
+    <!-- Banner 310 -->
     <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
@@ -39,6 +38,7 @@ permalink: "/about/"
         <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" decoding="async" aria-hidden="true">
     </div>
 
+    <!-- Side By Side 2535 -->
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
@@ -86,6 +86,7 @@ permalink: "/about/"
         <img class="cs-watermark" src="/assets/svgs/logo-icon-watermark.svg" alt="" width="292" height="216" aria-hidden="true" loading="lazy" decoding="async">
     </section>
 
+    <!-- Story 2600 -->
     <!-- ============================================ -->
     <!--                    Story                     -->
     <!-- ============================================ -->
@@ -151,6 +152,7 @@ permalink: "/about/"
         </div>
     </section>
 
+    <!-- Why Work With Me 2601 -->
     <!-- ============================================ -->
     <!--                 Why Work With Me             -->
     <!-- ============================================ -->
@@ -190,6 +192,7 @@ permalink: "/about/"
         </div>
     </section>
 
+    <!-- Side By Side Reverse 2050 -->
     <!-- ============================================ -->
     <!--             Side By Side Reverse             -->
     <!-- ============================================ -->
