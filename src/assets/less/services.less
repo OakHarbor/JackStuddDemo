@@ -462,6 +462,10 @@
             object-fit: contain;
         }
 
+        .cs-icon-light {
+            filter: brightness(0) invert(1);
+        }
+
         .cs-number {
             font-family: var(--headerFont);
             font-size: clamp(2.75rem, 3.18vw, 3.8125rem);
@@ -494,6 +498,12 @@
             color: var(--bodyTextColor);
         }
 
+        .cs-closing {
+            text-align: center;
+            max-width: (920/16rem);
+            margin: 0;
+        }
+
         .cs-button-solid {
             margin-top: calc(clamp(3rem, 6vw, 4rem) * -1 + 2rem);
         }
@@ -508,6 +518,10 @@
 
         .cs-item {
             grid-column: span 4;
+        }
+
+        .cs-card-group:has(> .cs-item:nth-child(4)) .cs-item {
+            grid-column: span 6;
         }
     }
 }

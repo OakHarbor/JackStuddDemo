@@ -1,0 +1,51 @@
+<!-- CTA 2573 -->
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-2573">
+    <div class="cs-container">
+        <div class="cs-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">Let's Talk</span>
+                <h2 class="cs-title">Where to Start</h2>
+                <p class="cs-text">
+                    If you want to build a mountain house in the High Country, there's a starting point wherever you are in the process, whether you're looking for land, already have a full set of architectural plans and specs, or somewhere in between.
+                </p>
+                <p class="cs-text">
+                    The first step is a free, get to know each other consultation. You will learn about me and the different services I offer, and I'll learn about you and your project. Together, we'll figure out if it's a good fit and what the next steps are.
+                </p>
+                <p class="cs-text">
+                    Once you schedule an appointment, I'll email you a Dropbox link so you can upload any relevant documents into it that will help me be prepared for our meeting.
+                </p>
+            </div>
+            <a href="/contact/" class="cs-button-solid">Schedule Appointment</a>
+        </div>
+        <div class="cs-card">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/cta-call-card-portrait.jpg" | resize({ width: 616, height: 480, position: "attention" }) | jpeg %}" alt="Smiling man in a coral polo standing in front of a grey house with a white picket fence" width="308" height="240" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-label">Prefer to Talk First?</span>
+                <a href="tel:{{ client.phoneForTel }}" class="cs-phone">Call: {{ client.phoneFormatted }}</a>
+            </div>
+        </div>
+    </div>
+
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 608, height: 1000, position: "attention" }) | avif %}" type="image/avif">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 1980, height: 1100, position: "attention" }) | avif %}" type="image/avif">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 2500, height: 819, position: "attention" }) | avif %}" type="image/avif">
+        <img src="{% getUrl "/assets/images/cta-bg.jpg" | resize({ width: 2500, height: 819, position: "attention" }) | jpeg %}" alt="Aerial view of wooden chalets and a ski lift in an evergreen forest" width="1920" height="629" loading="lazy" decoding="async">
+    </picture>
+    <img class="cs-separator" src="/assets/svgs/separator.svg" alt="" width="1920" height="31" loading="lazy" decoding="async" aria-hidden="true">
+</section>
